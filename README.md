@@ -6,7 +6,7 @@ This adapter is a poolcontroller for the creation of an ioBroker adapter. You do
 
 
 ### 0.0.1
-* (Michael Voelker) initial release
+* (MichaelVoelker) initial release
 
 ## License
 The MIT License (MIT)
