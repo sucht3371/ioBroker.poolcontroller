@@ -1,6 +1,6 @@
 {
   "name": "iobroker.poolcontroller",
-  "version": "0.6.0",
+  "version": "0.0.1",
   "description": "ioBroker poolcontroller Adapter",
   "author": {
     "name": "Michael Voelker",
@@ -12,7 +12,7 @@
       "email": "mv@netcompsys.de"
     }
   ],
-  "homepage": "https://github.com/ioBroker/ioBroker.poolcontroller",
+  "homepage": "https://github.com/sucht3371/ioBroker.poolcontroller",
   "license": "MIT",
   "keywords": [
     "ioBroker",
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ioBroker/ioBroker.poolcontroller"
+    "url": "https://github.com/sucht3371/ioBroker.poolcontroller"
   },
   "dependencies": {},
   "devDependencies": {
@@ -35,7 +35,7 @@
     "test": "node node_modules/mocha/bin/mocha --exit"
   },
   "bugs": {
-    "url": "https://github.com/ioBroker/ioBroker.poolcontroller/issues"
+    "url": "https://github.com/sucht3371/ioBroker.poolcontroller/issues"
   },
   "readmeFilename": "README.md"
 }
