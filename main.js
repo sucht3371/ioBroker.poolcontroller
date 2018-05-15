@@ -229,11 +229,11 @@ var stateanlegen = true;
  //        var wert =  offset + ( gain * value);
  //       adapter.setState('poolcontroller.0.'+jdata[1][i], parseFloat(Number(wert).toFixed(2)));
          }    
-    console.log("Variablen updated");
-  }
-    }).on("error", function (e) {console.error(e);});
-  } catch (e) { console.error(e); }
-});
+//    console.log("Variablen updated");
+ // }
+   // }).on("error", function (e) {console.error(e);});
+  //} catch (e) { console.error(e); }
+//});
 
 
 /**
