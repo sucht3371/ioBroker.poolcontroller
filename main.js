@@ -88,12 +88,82 @@ adapter.on('ready', function () {
 });
 
 function main() {
-
-    // The adapters config (in the instance object everything under the attribute "native") is accessible via
-    // adapter.config:
     adapter.log.info('config host: '    + adapter.config.host);
     adapter.log.info('config port: '    + adapter.config.port);
     adapter.log.info('config interval: ' + adapter.config.interval);
+
+
+
+
+
+var host = adapter.config.host
+var port = adapter.config.port
+var interval = adapter.config.interval
+
+
+var url="http://" + host + ":" + port + "/GetState.csv"
+
+//*********************************************************************
+var result, json;
+var stateanlegen = true;
+
+//SYSINFO Variablen anlegen
+       createState('poolcontroller0.SYSINFO.VERSION', {
+        name: 'VERSION',
+        type: 'string',
+        write: false,
+        read:  true
+        });
+        createState('poolcontroller0.SYSINFO.CPU_TIME', {
+        name: 'CPU_TIME',
+        type: 'number',
+        write: false,
+        read:  true
+        });
+        createState('poolcontroller0.SYSINFO.RESET_ROOT_CAUSE', {
+        name: 'RESET_ROOT_CAUSE',
+        type: 'number',
+        write: false,
+        read:  true
+        });
+         createState('poolcontroller0.SYSINFO.NTP_FAULT_STATE', {
+        name: 'NTP_FAULT_STATE',
+        type: 'number',
+        write: false,
+        read:  true
+        });
+        createState('poolcontroller0.SYSINFO.CONFIG_OTHER_ENABLE', {
+        name: 'CONFIG_OTHER_ENABLE',
+        type: 'number',
+        write: false,
+        read:  true
+        });
+        createState('poolcontroller0.SYSINFO.DOSAGE_CNTRL', {
+        name: 'DOSAGE_CNTRL',
+        type: 'number',
+        write: false,
+        read:  true
+        });
+        createState('poolcontroller0.SYSINFO.pH+_DOSAGE_RELAIS_ID', {
+        name: 'pH+_DOSAGE_RELAIS_ID',
+        type: 'number',
+        write: false,
+        read:  true
+        });
+        createState('poolcontroller0.SYSINFO.pH-_DOSAGE_RELAIS_ID', {
+        name: 'pH-_DOSAGE_RELAIS_ID',
+        type: 'number',
+        write: false,
+        read:  true
+        });
+        createState('poolcontroller0.SYSINFO.Chlor_DOSAGE_RELAIS_ID', {
+        name: 'Chlor_DOSAGE_RELAIS_ID',
+        type: 'number',
+        write: false,
+        read:  true
+        });
+
+
 
 
     /**
