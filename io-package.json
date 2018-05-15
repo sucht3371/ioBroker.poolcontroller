@@ -46,18 +46,17 @@
             "nl": "docs/nl/admin.md",
             "pt": "docs/pt/admin.md"
         },
+        "localLink": "http://%host%:80",
         "platform": "Javascript/Node.js",
         "mode": "daemon",
         "icon": "poolcontroller.png",
         "materialize": true,
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/sucht3371/ioBroker.poolcontroller/master/admin/poolcontroller.png",
-        
+        "extIcon": "https://raw.githubusercontent.com/sucht3371/ioBroker.poolcontroller/master/admin/poolcontroller.png",    
         "keywords": ["poolcontroller", "vis", "GUI", "graphical", "scada"],
         "readme": "https://github.com/sucht3371/ioBroker.poolcontroller/blob/master/README.md",
         "loglevel": "info",
-        "type": "general",
-        "restartAdapters": ["vis"]
+        "type": "general"
     },
     "native": {
         "test1": true,
