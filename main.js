@@ -101,68 +101,227 @@ var port = adapter.config.port
 var interval = adapter.config.interval
 
 
-var url="http://" + host + ":" + port + "/GetState.csv"
+// var url="http://" + host + ":" + port + "/GetState.csv"
 
+var url='http://192.168.178.35:80/GetState.csv'
 //*********************************************************************
 var result, json;
 var stateanlegen = true;
 
 //SYSINFO Variablen anlegen
-       createState('poolcontroller0.SYSINFO.VERSION', {
+       createState('poolcontroller.0.SYSINFO.VERSION', {
         name: 'VERSION',
         type: 'string',
         write: false,
         read:  true
         });
-        createState('poolcontroller0.SYSINFO.CPU_TIME', {
+        createState('poolcontroller.0.SYSINFO.CPU_TIME', {
         name: 'CPU_TIME',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller0.SYSINFO.RESET_ROOT_CAUSE', {
+        createState('poolcontroller.0.SYSINFO.RESET_ROOT_CAUSE', {
         name: 'RESET_ROOT_CAUSE',
         type: 'number',
         write: false,
         read:  true
         });
-         createState('poolcontroller0.SYSINFO.NTP_FAULT_STATE', {
+         createState('poolcontroller.0.SYSINFO.NTP_FAULT_STATE', {
         name: 'NTP_FAULT_STATE',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller0.SYSINFO.CONFIG_OTHER_ENABLE', {
+        createState('poolcontroller.0.SYSINFO.CONFIG_OTHER_ENABLE', {
         name: 'CONFIG_OTHER_ENABLE',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller0.SYSINFO.DOSAGE_CNTRL', {
+        createState('poolcontroller.0.SYSINFO.DOSAGE_CNTRL', {
         name: 'DOSAGE_CNTRL',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller0.SYSINFO.pH+_DOSAGE_RELAIS_ID', {
+        createState('poolcontroller.0.SYSINFO.pH+_DOSAGE_RELAIS_ID', {
         name: 'pH+_DOSAGE_RELAIS_ID',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller0.SYSINFO.pH-_DOSAGE_RELAIS_ID', {
+        createState('poolcontroller.0.SYSINFO.pH-_DOSAGE_RELAIS_ID', {
         name: 'pH-_DOSAGE_RELAIS_ID',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller0.SYSINFO.Chlor_DOSAGE_RELAIS_ID', {
+        createState('poolcontroller.0.SYSINFO.Chlor_DOSAGE_RELAIS_ID', {
         name: 'Chlor_DOSAGE_RELAIS_ID',
         type: 'number',
         write: false,
         read:  true
         });
 
+
+//alle 30 Sekunden Werte neu einlesen
+schedule("*/180 * * * * *", function () {
+  try {
+    require("request")(url, function (error, response, result) {
+   //   console.log(result);
+    result = result.replace(/ /g, '_');  //alle Leerzeichen durch Unterstrich ersetzten
+    var data=CSVToArray(result);         //CSV in ein Array einlesen
+    json = JSON.stringify(data);         //Array in einen String formatieren
+    var jdata = JSON.parse(json);        //Json Array erzeugen
+    var arr1 = jdata[0];                 // Array 0 von ingesamt 6, weil 6 Zeilen im CVS mit \n getrennt
+    var arr2 = jdata[1];                 // Array 1-5 haben je 42 einzelne  Daten
+    var arr3 = jdata[2];
+    var arr4 = jdata[3];
+    var arr5 = jdata[4];
+    var arr6 = jdata[5];
+   
+/** Debug Ausgaben der Arrays
+    console.log(arr1);
+    console.log(arr2);
+    console.log(arr3);
+    console.log(arr4);
+    console.log(arr5);
+    console.log(arr6);
+ */
+
+  if (stateanlegen === true){
+    // User Variablen anlegen Achtung keine Punkte im Namen verwenden. 
+    var i=0;
+    for (i=0; i<=41;i++){
+        createState('poolcontroller.0.'+jdata[1][i],'', {
+        name: ''+jdata[1][i],
+        type: 'number',
+        unit: ''+jdata[2][i],
+        write: false,
+        read:  true
+        });
+    }
+    console.log("Variablen angelegt");
+    stateanlegen = false;
+  }
+  else {
+  
+  //SYSINFO Variablen mit aktuellen Werten beschreiben 
+    setState('poolcontroller.0.SYSINFO.VERSION', jdata[0][1]);
+    setState('poolcontroller.0.SYSINFO.CPU_TIME', parseFloat(Number(jdata[0][2]).toFixed(2)));
+    setState('poolcontroller.0.SYSINFO.RESET_ROOT_CAUSE', parseFloat(Number(jdata[0][3]).toFixed(2))); 
+    setState('poolcontroller.0.SYSINFO.NTP_FAULT_STATE', parseFloat(Number(jdata[0][4]).toFixed(2)));
+    setState('poolcontroller.0.SYSINFO.CONFIG_OTHER_ENABLE', parseFloat(Number(jdata[0][5]).toFixed(2)));
+    setState('poolcontroller.0.SYSINFO.DOSAGE_CNTRL', parseFloat(Number(jdata[0][6]).toFixed(2)));
+    setState('poolcontroller.0.SYSINFO.pH+_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][7]).toFixed(2)));
+    setState('poolcontroller.0.SYSINFO.pH-_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][8]).toFixed(2)));
+    setState('poolcontroller.0.SYSINFO.Chlor_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][9]).toFixed(2)));
+  
+  
+   // User Variablen mit aktuellen Werten beschreiben
+   i=0; 
+    for (i=0; i<=41;i++){
+        //var wert = offset + ( gain * value);
+       var offset =  parseFloat(jdata[3][i]);
+       var gain =   parseFloat(jdata[4][i]);
+       var value =   parseFloat(jdata[5][i]);
+         var wert =  offset + ( gain * value);
+        setState('poolcontroller.0.'+jdata[1][i], parseFloat(Number(wert).toFixed(2)));
+         }    
+    console.log("Variablen updated");
+  }
+    }).on("error", function (e) {console.error(e);});
+  } catch (e) { console.error(e); }
+});
+
+
+/**
+* Javascript CSV To Array
+*/
+
+function CSVToArray( strData, strDelimiter ){
+    // Check to see if the delimiter is defined. If not,
+    // then default to comma.
+    strDelimiter = (strDelimiter || ",");
+
+    // Create a regular expression to parse the CSV values.
+    var objPattern = new RegExp(
+        (
+            // Delimiters.
+            "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
+
+            // Quoted fields.
+            "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
+
+            // Standard fields.
+            "([^\"\\" + strDelimiter + "\\r\\n]*))"
+        ),
+        "gi"
+        );
+
+
+    // Create an array to hold our data. Give the array
+    // a default empty first row.
+    var arrData = [[]];
+
+    // Create an array to hold our individual pattern
+    // matching groups.
+    var arrMatches = null;
+
+
+    // Keep looping over the regular expression matches
+    // until we can no longer find a match.
+    while (arrMatches = objPattern.exec( strData )){
+
+        // Get the delimiter that was found.
+        var strMatchedDelimiter = arrMatches[ 1 ];
+
+        // Check to see if the given delimiter has a length
+        // (is not the start of string) and if it matches
+        // field delimiter. If id does not, then we know
+        // that this delimiter is a row delimiter.
+        if (
+            strMatchedDelimiter.length &&
+            strMatchedDelimiter !== strDelimiter
+            ){
+
+            // Since we have reached a new row of data,
+            // add an empty row to our data array.
+            arrData.push( [] );
+
+        }
+
+        var strMatchedValue;
+
+        // Now that we have our delimiter out of the way,
+        // let's check to see which kind of value we
+        // captured (quoted or unquoted).
+        if (arrMatches[ 2 ]){
+
+            // We found a quoted value. When we capture
+            // this value, unescape any double quotes.
+            strMatchedValue = arrMatches[ 2 ].replace(
+                new RegExp( "\"\"", "g" ),
+                "\""
+                );
+
+        } else {
+
+            // We found a non-quoted value.
+            strMatchedValue = arrMatches[ 3 ];
+
+        }
+
+
+        // Now that we have our value string, let's add
+        // it to the data array.
+        arrData[ arrData.length - 1 ].push( strMatchedValue );
+    }
+
+    // Return the parsed data.
+    return( arrData );
+}
 
 
 
