@@ -1,28 +1,28 @@
 {
-  "name": "iobroker.template",
+  "name": "iobroker.poolcontroller",
   "version": "0.6.0",
-  "description": "ioBroker template Adapter",
+  "description": "ioBroker poolcontroller Adapter",
   "author": {
-    "name": "@@Author@@",
-    "email": "@@email@@"
+    "name": "Michael Voelker",
+    "email": "mv@netcompsys.de"
   },
   "contributors": [
     {
-      "name": "@@Author@@",
-      "email": "@@email@@"
+      "name": "Michael Voelker",
+      "email": "mv@netcompsys.de"
     }
   ],
-  "homepage": "https://github.com/ioBroker/ioBroker.template",
+  "homepage": "https://github.com/ioBroker/ioBroker.poolcontroller",
   "license": "MIT",
   "keywords": [
     "ioBroker",
-    "template",
+    "poolcontroller",
     "Smart Home",
     "home automation"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ioBroker/ioBroker.template"
+    "url": "https://github.com/ioBroker/ioBroker.poolcontroller"
   },
   "dependencies": {},
   "devDependencies": {
@@ -35,7 +35,7 @@
     "test": "node node_modules/mocha/bin/mocha --exit"
   },
   "bugs": {
-    "url": "https://github.com/ioBroker/ioBroker.template/issues"
+    "url": "https://github.com/ioBroker/ioBroker.poolcontroller/issues"
   },
   "readmeFilename": "README.md"
 }
