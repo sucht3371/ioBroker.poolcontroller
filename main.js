@@ -103,61 +103,61 @@ var interval = adapter.config.interval
 
 // var url="http://" + host + ":" + port + "/GetState.csv"
 
-var url='http://192.168.178.35:80/GetState.csv'
+var url="http://192.168.178.35:80/GetState.csv"
 //*********************************************************************
 var result, json;
 var stateanlegen = true;
 
 //SYSINFO Variablen anlegen
-       createState('poolcontroller.0.SYSINFO.VERSION', {
+       adapter.createState('poolcontroller.0.SYSINFO.VERSION', {
         name: 'VERSION',
         type: 'string',
         write: false,
         read:  true
         });
-        createState('poolcontroller.0.SYSINFO.CPU_TIME', {
+        adapter.createState('poolcontroller.0.SYSINFO.CPU_TIME', {
         name: 'CPU_TIME',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller.0.SYSINFO.RESET_ROOT_CAUSE', {
+        adapter.createState('poolcontroller.0.SYSINFO.RESET_ROOT_CAUSE', {
         name: 'RESET_ROOT_CAUSE',
         type: 'number',
         write: false,
         read:  true
         });
-         createState('poolcontroller.0.SYSINFO.NTP_FAULT_STATE', {
+         adapter.createState('poolcontroller.0.SYSINFO.NTP_FAULT_STATE', {
         name: 'NTP_FAULT_STATE',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller.0.SYSINFO.CONFIG_OTHER_ENABLE', {
+        adapter.createState('poolcontroller.0.SYSINFO.CONFIG_OTHER_ENABLE', {
         name: 'CONFIG_OTHER_ENABLE',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller.0.SYSINFO.DOSAGE_CNTRL', {
+        adapter.createState('poolcontroller.0.SYSINFO.DOSAGE_CNTRL', {
         name: 'DOSAGE_CNTRL',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller.0.SYSINFO.pH+_DOSAGE_RELAIS_ID', {
+        adapter.createState('poolcontroller.0.SYSINFO.pH+_DOSAGE_RELAIS_ID', {
         name: 'pH+_DOSAGE_RELAIS_ID',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller.0.SYSINFO.pH-_DOSAGE_RELAIS_ID', {
+        adapter.createState('poolcontroller.0.SYSINFO.pH-_DOSAGE_RELAIS_ID', {
         name: 'pH-_DOSAGE_RELAIS_ID',
         type: 'number',
         write: false,
         read:  true
         });
-        createState('poolcontroller.0.SYSINFO.Chlor_DOSAGE_RELAIS_ID', {
+        adapter.createState('poolcontroller.0.SYSINFO.Chlor_DOSAGE_RELAIS_ID', {
         name: 'Chlor_DOSAGE_RELAIS_ID',
         type: 'number',
         write: false,
@@ -194,7 +194,7 @@ schedule("*/180 * * * * *", function () {
     // User Variablen anlegen Achtung keine Punkte im Namen verwenden. 
     var i=0;
     for (i=0; i<=41;i++){
-        createState('poolcontroller.0.'+jdata[1][i],'', {
+        adapter.createState('poolcontroller.0.'+jdata[1][i],'', {
         name: ''+jdata[1][i],
         type: 'number',
         unit: ''+jdata[2][i],
