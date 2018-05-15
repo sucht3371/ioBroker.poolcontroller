@@ -101,7 +101,22 @@ var port = adapter.config.port
 var interval = adapter.config.interval
 
 
-// var url="http://" + host + ":" + port + "/GetState.csv"
+//var url="http://" + host + ":" + port + "/GetState.csv"
+
+request(
+	{
+		url: "http://" + host + ":" + port + "/GetState.csv"	
+	},
+	function(error, response, content)	{
+		adapter.log.debug('Request done');
+		
+		if (!error&& responce.statuscode == 200){
+			adapter.log.info(content);
+		} else 	{
+			adapter.log.error(error);
+		}		
+	}
+		);
 
 
 
