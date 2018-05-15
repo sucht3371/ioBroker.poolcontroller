@@ -208,15 +208,15 @@ schedule("*/180 * * * * *", function () {
   else {
   
   //SYSINFO Variablen mit aktuellen Werten beschreiben 
-    setState('poolcontroller.0.SYSINFO.VERSION', jdata[0][1]);
-    setState('poolcontroller.0.SYSINFO.CPU_TIME', parseFloat(Number(jdata[0][2]).toFixed(2)));
-    setState('poolcontroller.0.SYSINFO.RESET_ROOT_CAUSE', parseFloat(Number(jdata[0][3]).toFixed(2))); 
-    setState('poolcontroller.0.SYSINFO.NTP_FAULT_STATE', parseFloat(Number(jdata[0][4]).toFixed(2)));
-    setState('poolcontroller.0.SYSINFO.CONFIG_OTHER_ENABLE', parseFloat(Number(jdata[0][5]).toFixed(2)));
-    setState('poolcontroller.0.SYSINFO.DOSAGE_CNTRL', parseFloat(Number(jdata[0][6]).toFixed(2)));
-    setState('poolcontroller.0.SYSINFO.pH+_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][7]).toFixed(2)));
-    setState('poolcontroller.0.SYSINFO.pH-_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][8]).toFixed(2)));
-    setState('poolcontroller.0.SYSINFO.Chlor_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][9]).toFixed(2)));
+    adapter.setState('poolcontroller.0.SYSINFO.VERSION', jdata[0][1]);
+    adapter.setState('poolcontroller.0.SYSINFO.CPU_TIME', parseFloat(Number(jdata[0][2]).toFixed(2)));
+    adapter.setState('poolcontroller.0.SYSINFO.RESET_ROOT_CAUSE', parseFloat(Number(jdata[0][3]).toFixed(2))); 
+    adapter.setState('poolcontroller.0.SYSINFO.NTP_FAULT_STATE', parseFloat(Number(jdata[0][4]).toFixed(2)));
+    adapter.setState('poolcontroller.0.SYSINFO.CONFIG_OTHER_ENABLE', parseFloat(Number(jdata[0][5]).toFixed(2)));
+    adapter.setState('poolcontroller.0.SYSINFO.DOSAGE_CNTRL', parseFloat(Number(jdata[0][6]).toFixed(2)));
+    adapter.setState('poolcontroller.0.SYSINFO.pH+_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][7]).toFixed(2)));
+    adapter.setState('poolcontroller.0.SYSINFO.pH-_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][8]).toFixed(2)));
+    adapter.setState('poolcontroller.0.SYSINFO.Chlor_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][9]).toFixed(2)));
   
   
    // User Variablen mit aktuellen Werten beschreiben
@@ -227,7 +227,7 @@ schedule("*/180 * * * * *", function () {
        var gain =   parseFloat(jdata[4][i]);
        var value =   parseFloat(jdata[5][i]);
          var wert =  offset + ( gain * value);
-        setState('poolcontroller.0.'+jdata[1][i], parseFloat(Number(wert).toFixed(2)));
+        adapter.setState('poolcontroller.0.'+jdata[1][i], parseFloat(Number(wert).toFixed(2)));
          }    
     console.log("Variablen updated");
   }
@@ -350,9 +350,9 @@ function CSVToArray( strData, strDelimiter ){
 
 
     /**
-     *   setState examples
+     *   adapter.setState examples
      *
-     *   you will notice that each setState will cause the stateChange event to fire (because of above subscribeStates cmd)
+     *   you will notice that each adapter.setState will cause the stateChange event to fire (because of above subscribeStates cmd)
      *
      */
 
