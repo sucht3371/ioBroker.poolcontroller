@@ -113,7 +113,8 @@ var stateanlegen = true;
         type: 'string',
         write: false,
         read:  true
-        });
+        native: {}
+                });
 
 //var url="http://" + host + ":" + port + "/GetState.csv"
 
