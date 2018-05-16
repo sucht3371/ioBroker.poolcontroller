@@ -262,6 +262,7 @@ request(
 			var arr5 = jdata[4];
 			var arr6 = jdata[5];			
 			adapter.log.info(arr2);
+			adapter.log.info('hallo');
 			adapter.log.info(content);
 		} else 	{
 			adapter.log.error(error);
@@ -290,7 +291,7 @@ request(
     // ack should be always set to true if the value is received from or acknowledged from the target system
     adapter.setState('testVariable', {val: true, ack: true});
     
-    
+//##################################################################    
     
 function CSVToArray( strData, strDelimiter ){
     // Check to see if the delimiter is defined. If not,
