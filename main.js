@@ -253,7 +253,7 @@ request(
 		if (!error&& responce.statuscode == 200){
 			adapter.log.info(content);
 		} else 	{
-			adapter.log.error(error);
+			adapter.log.error(eror);
 		}		
 	}
 		);
