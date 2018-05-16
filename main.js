@@ -108,13 +108,24 @@ var result, json;
 var stateanlegen = true;
 
 //SYSINFO Variablen anlegen
-       adapter.setObject('poolcontroller.0.SYSINFO.VERSION', {
-        name: 'VERSION',
-        type: 'string',
-        write: false,
-        read:  true
+   //    adapter.setObject('poolcontroller.0.SYSINFO.VERSION', {
+     //   name: 'VERSION',
+      //  type: 'string',
+      //  write: false,
+      //  read:  true
+      //  native: {}
+      //          });
+ 
+ adapter.setObject('VERSION', {
+        type: 'state',
+        common: {
+            name: 'VERSION',
+            type: 'string',
+            role: 'test'
+        },
         native: {}
-                });
+    });               
+                
 
 //var url="http://" + host + ":" + port + "/GetState.csv"
 
