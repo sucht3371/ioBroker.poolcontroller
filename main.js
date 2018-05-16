@@ -250,7 +250,7 @@ request(
 	function(error, responce, content)	{
 		adapter.log.debug('Request done');
 		
-		if (!error&& responce.statuscode == 200){
+		if (!error){
 			adapter.log.info(content);
 		} else 	{
 			adapter.log.error(error);
