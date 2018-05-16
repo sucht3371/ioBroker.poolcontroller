@@ -254,6 +254,7 @@ request(
 			content =content.replace(/ /g, '_'); 	 //alle Leerzeichen durch Unterstrich ersetzten
 			var data=CSVToArray(result);         //CSV in ein Array einlesen
 			json = JSON.stringify(data);         //Array in einen String formatieren
+			var jdata = JSON.parse(json);        //Json Array erzeugen
 			var arr1 = jdata[0];				// Array 0 von ingesamt 6, weil 6 Zeilen im CVS mit \n getrennt	
 			adapter.log.info(arr1);
 			adapter.log.info(content);
