@@ -130,7 +130,7 @@ var stateanlegen = true;
 //var url="http://" + host + ":" + port + "/GetState.csv"
 
 //request(
-	{
+//	{
 //		url: "http://192.168.178.35/GetState.csv"
 //	},
 //	function(error, content)	{
@@ -144,18 +144,6 @@ var stateanlegen = true;
 //	}
 //		);
 
-
-
-
-    /**
-     *
-     *      For every state in the system there has to be also an object of type state
-     *
-     *      Here a simple poolcontroller for a boolean variable named "testVariable"
-     *
-     *      Because every adapter instance uses its own unique namespace variable names can't collide with other adapters variables
-     *
-     */
 
     adapter.setObject('testVariable', {
         type: 'state',
