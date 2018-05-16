@@ -111,7 +111,7 @@ var stateanlegen = true;
 
 //SYSINFO Variablen anlegen
    
- adapter.setObjectNotExist('sysinfo.VERSION', {
+ adapter.setObjectNotExists('sysinfo.VERSION', {
         type: 'state',
         common: {
             name: 'VERSION',
@@ -123,7 +123,7 @@ var stateanlegen = true;
         native: {}
     });               
  
- adapter.setObjectNotExist('sysinfo.RESET_ROOT_CAUSE', {
+ adapter.setObjectNotExists('sysinfo.RESET_ROOT_CAUSE', {
         type: 'state',
         common: {
             name: 'RESET_ROOT_CAUSE',
@@ -135,7 +135,7 @@ var stateanlegen = true;
         native: {}
     });               
 
- adapter.setObjectNotExist('sysinfo.pH-_DOSAGE_RELAIS_ID', {
+ adapter.setObjectNotExists('sysinfo.pH-_DOSAGE_RELAIS_ID', {
         type: 'state',
         common: {
             name: 'pH-_DOSAGE_RELAIS_ID',
@@ -147,7 +147,7 @@ var stateanlegen = true;
         native: {}
     });
     
- adapter.setObjectNotExist('sysinfo.pH+_DOSAGE_RELAIS_ID', {
+ adapter.setObjectNotExists('sysinfo.pH+_DOSAGE_RELAIS_ID', {
         type: 'state',
         common: {
             name: 'pH+_DOSAGE_RELAIS_ID',
@@ -159,7 +159,7 @@ var stateanlegen = true;
         native: {}
     });
     
- adapter.setObjectNotExist('sysinfo.NTP_FAULT_STATE', {
+ adapter.setObjectNotExists('sysinfo.NTP_FAULT_STATE', {
         type: 'state',
         common: {
             name: 'NTP_FAULT_STATE',
@@ -171,7 +171,7 @@ var stateanlegen = true;
         native: {}
     });
 
- adapter.setObjectNotExist('sysinfo.DOSAGE_CNTRL', {
+ adapter.setObjectNotExists('sysinfo.DOSAGE_CNTRL', {
         type: 'state',
         common: {
             name: 'DOSAGE_CNTRL',
@@ -183,7 +183,7 @@ var stateanlegen = true;
         native: {}
     });
     
- adapter.setObjectNotExist('sysinfo.CPU_TIME', {
+ adapter.setObjectNotExists('sysinfo.CPU_TIME', {
         type: 'state',
         common: {
             name: 'CPU_TIME',
@@ -195,7 +195,7 @@ var stateanlegen = true;
         native: {}
     });
     
- adapter.setObjectNotExist('sysinfo.CONFIG_OTHER_ENABLE', {
+ adapter.setObjectNotExists('sysinfo.CONFIG_OTHER_ENABLE', {
         type: 'state',
         common: {
             name: 'CONFIG_OTHER_ENABLE',
@@ -207,7 +207,7 @@ var stateanlegen = true;
         native: {}
     });
     
-  adapter.setObjectNotExist('sysinfo.Chlor_DOSAGE_RELAIS_ID', {
+  adapter.setObjectNotExists('sysinfo.Chlor_DOSAGE_RELAIS_ID', {
         type: 'state',
         common: {
             name: 'Chlor_DOSAGE_RELAIS_ID',
@@ -244,7 +244,7 @@ var stateanlegen = true;
 //		);
 
 
-    adapter.setObjectNotExist('testVariable', {
+    adapter.setObjectNotExists('testVariable', {
         type: 'state',
         common: {
             name: 'testVariable',
