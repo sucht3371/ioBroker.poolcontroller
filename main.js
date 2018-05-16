@@ -103,6 +103,8 @@ var interval = adapter.config.interval
 
 var url='http://192.168.178.35:80/GetState.csv'
 
+adapter.log.info('URL ' + adapter.config.url);
+
 //*********************************************************************
 var result, json;
 var stateanlegen = true;
