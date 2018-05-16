@@ -116,7 +116,7 @@ var stateanlegen = true;
       //  native: {}
       //          });
  
- adapter.setObject('VERSION', {
+ adapter.setObject('Test.VERSION', {
         type: 'state',
         common: {
             name: 'VERSION',
