@@ -221,20 +221,20 @@ var stateanlegen = true;
    
 //#################################################################
 
-    require("request")(url, function (error, response, result) 
-    {
+//    require("request")(url, function (error, response, result) 
+//    {
 		   //   console.log(result);
-		    result = result.replace(/ /g, '_');  //alle Leerzeichen durch Unterstrich ersetzten
-		    var data=CSVToArray(result);         //CSV in ein Array einlesen
-		    json = JSON.stringify(data);         //Array in einen String formatieren
-		    var jdata = JSON.parse(json);        //Json Array erzeugen
-		    var arr1 = jdata[0];                 // Array 0 von ingesamt 6, weil 6 Zeilen im CVS mit \n getrennt
-		    var arr2 = jdata[1];                 // Array 1-5 haben je 42 einzelne  Daten
-		    var arr3 = jdata[2];
-		    var arr4 = jdata[3];
-		    var arr5 = jdata[4];
-		    var arr6 = jdata[5];
-   }
+//		    result = result.replace(/ /g, '_');  //alle Leerzeichen durch Unterstrich ersetzten
+//		    var data=CSVToArray(result);         //CSV in ein Array einlesen
+//		    json = JSON.stringify(data);         //Array in einen String formatieren
+//		    var jdata = JSON.parse(json);        //Json Array erzeugen
+//		    var arr1 = jdata[0];                 // Array 0 von ingesamt 6, weil 6 Zeilen im CVS mit \n getrennt
+//		    var arr2 = jdata[1];                 // Array 1-5 haben je 42 einzelne  Daten
+//		    var arr3 = jdata[2];
+//		    var arr4 = jdata[3];
+//		    var arr5 = jdata[4];
+//		    var arr6 = jdata[5];
+  // }
 
 
 //#################################################################
