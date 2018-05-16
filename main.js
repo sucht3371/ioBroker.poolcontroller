@@ -251,6 +251,10 @@ request(
 		
 		if (!error){
 			adapter.log.info(content);
+			content =content.replace(/ /g, '_'); 	 //alle Leerzeichen durch Unterstrich ersetzten
+	
+		
+			adapter.log.info(content);
 		} else 	{
 			adapter.log.error(error);
 		}		
