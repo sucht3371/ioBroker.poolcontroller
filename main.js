@@ -220,10 +220,7 @@ var stateanlegen = true;
     });
    
 //#################################################################
-schedule("*/180 * * * * *", function () 
-{
-  try 
-  {
+
     require("request")(url, function (error, response, result) 
     {
 		   //   console.log(result);
@@ -237,9 +234,9 @@ schedule("*/180 * * * * *", function ()
 		    var arr4 = jdata[3];
 		    var arr5 = jdata[4];
 		    var arr6 = jdata[5];
- //   }
- // }
-});
+   }
+
+
 //#################################################################
 
     
