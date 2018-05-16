@@ -254,17 +254,9 @@ var stateanlegen = true;
         native: {}
     });
 
-    // in this poolcontroller all states changes inside the adapters namespace are subscribed
-    adapter.subscribeStates('*');
 
 
-    /**
-     *   adapter.setState examples
-     *
-     *   you will notice that each adapter.setState will cause the stateChange event to fire (because of above subscribeStates cmd)
-     *
-     */
-
+   
     // the variable testVariable is set to true as command (ack=false)
     adapter.setState('testVariable', true);
 
@@ -272,20 +264,6 @@ var stateanlegen = true;
     // ack should be always set to true if the value is received from or acknowledged from the target system
     adapter.setState('testVariable', {val: true, ack: true});
 
-    // same thing, but the state is deleted after 30s (getState will return null afterwards)
-    adapter.setState('testVariable', {val: true, ack: true, expire: 30});
-
-
-
-    // examples for the checkPassword/checkGroup functions
-    adapter.checkPassword('admin', 'iobroker', function (res) {
-        console.log('check user admin pw ioboker: ' + res);
-    });
-
-    adapter.checkGroup('admin', 'admin', function (res) {
-        console.log('check group user admin group admin: ' + res);
-    });
-
-
+  
 
 }
