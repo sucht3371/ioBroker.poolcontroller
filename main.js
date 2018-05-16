@@ -233,7 +233,10 @@ schedule("*/180 * * * * *", function () {
     var arr3 = jdata[2];
     var arr4 = jdata[3];
     var arr5 = jdata[4];
-    var arr6 = jdata[5];     
+    var arr6 = jdata[5];
+    	}
+    }
+});
 //#################################################################
 
     
