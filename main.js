@@ -261,7 +261,7 @@ request(
 			var arr4 = jdata[3];
 			var arr5 = jdata[4];
 			var arr6 = jdata[5];			
-			adapter.log.info(arr1);
+			adapter.log.info(arr2);
 			adapter.log.info(content);
 		} else 	{
 			adapter.log.error(error);
