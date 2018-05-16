@@ -108,20 +108,14 @@ var result, json;
 var stateanlegen = true;
 
 //SYSINFO Variablen anlegen
-   //    adapter.setObject('poolcontroller.0.SYSINFO.VERSION', {
-     //   name: 'VERSION',
-      //  type: 'string',
-      //  write: false,
-      //  read:  true
-      //  native: {}
-      //          });
- 
- adapter.setObject('Test.VERSION', {
+   
+ adapter.setObject('sysinfo.version', {
         type: 'state',
         common: {
-            name: 'VERSION',
+            name: 'version',
             type: 'string',
-            role: 'test'
+            read: true,
+            write: false
         },
         native: {}
     });               
