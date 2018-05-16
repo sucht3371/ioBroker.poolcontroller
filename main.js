@@ -105,7 +105,7 @@ var interval = adapter.config.interval
 
 request(
 	{
-		url: "http://" + host + "/GetState.csv"	
+		url: "http://192.168.178.35/GetState.csv"	
 	},
 	function(error, response, content)	{
 		adapter.log.debug('Request done');
