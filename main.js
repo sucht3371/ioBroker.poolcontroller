@@ -101,7 +101,7 @@ var port = adapter.config.port
 var interval = adapter.config.interval
 
 
-var url="http://192.168.178.35:80/GetState.csv"
+//var url="http://192.168.178.35:80/GetState.csv"
 
 adapter.log.info('URL ' + adapter.url);
 
@@ -221,8 +221,8 @@ var stateanlegen = true;
    
 //#################################################################
 
-    require("request")(url, function (error, response, result) 
-    {
+    //require("request")(url, function (error, response, result) 
+  //  {
 		   //   console.log(result);
 //		    result = result.replace(/ /g, '_');  //alle Leerzeichen durch Unterstrich ersetzten
 //		    var data=CSVToArray(result);         //CSV in ein Array einlesen
@@ -234,7 +234,7 @@ var stateanlegen = true;
 //		    var arr4 = jdata[3];
 //		    var arr5 = jdata[4];
 //		    var arr6 = jdata[5];
-   }
+   //}
 
 
 //#################################################################
@@ -243,20 +243,20 @@ var stateanlegen = true;
     
     //var url="http://" + host + ":" + port + "/GetState.csv"
 
-//request(
-//	{
-//		url: "http://192.168.178.35/GetState.csv"
-//	},
-//	function(error, content)	{
-//		adapter.log.debug('Request done');
+request(
+	{
+		url: "http://192.168.178.35/GetState.csv"
+	},
+	function(error, content)	{
+		adapter.log.debug('Request done');
 		
-//		if (!error&& responce.statuscode == 200){
-//			adapter.log.info(content);
-//		} else 	{
-//			adapter.log.error(error);
-//		}		
-//	}
-//		);
+		if (!error&& responce.statuscode == 200){
+			adapter.log.info(content);
+		} else 	{
+			adapter.log.error(error);
+		}		
+	}
+		);
 
 
     adapter.setObjectNotExists('testVariable', {
