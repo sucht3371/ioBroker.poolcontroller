@@ -107,14 +107,14 @@ request(
 	{
 		url: "http://192.168.178.35/GetState.csv"
 	},
-	function(error, response, content)	{
+	function(error, content)	{
 		adapter.log.debug('Request done');
 		
-		if (!error&& responce.statuscode == 200){
-			adapter.log.info(content);
-		} else 	{
-			adapter.log.error(error);
-		}		
+//		if (!error&& responce.statuscode == 200){
+//			adapter.log.info(content);
+//		} else 	{
+//			adapter.log.error(error);
+//		}		
 	}
 		);
 
