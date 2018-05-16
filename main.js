@@ -108,7 +108,7 @@ var result, json;
 var stateanlegen = true;
 
 //SYSINFO Variablen anlegen
-       adapter.setObject('SYSINFO.VERSION', {
+       adapter.setObject('poolcontroller.0.SYSINFO.VERSION', {
         name: 'VERSION',
         type: 'string',
         write: false,
