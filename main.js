@@ -221,8 +221,8 @@ var stateanlegen = true;
    
 //#################################################################
 
-//    require("request")(url, function (error, response, result) 
-//    {
+    require("request")(url, function (error, response, result) 
+    {
 		   //   console.log(result);
 //		    result = result.replace(/ /g, '_');  //alle Leerzeichen durch Unterstrich ersetzten
 //		    var data=CSVToArray(result);         //CSV in ein Array einlesen
@@ -234,7 +234,7 @@ var stateanlegen = true;
 //		    var arr4 = jdata[3];
 //		    var arr5 = jdata[4];
 //		    var arr6 = jdata[5];
-  // }
+   }
 
 
 //#################################################################
