@@ -221,7 +221,7 @@ var stateanlegen = true;
    
 //#################################################################
 
-    require("request")(url, function (error, response, result) 
+//    require("request")(url, function (error, response, result) 
 //    {
 		   //   console.log(result);
 //		    result = result.replace(/ /g, '_');  //alle Leerzeichen durch Unterstrich ersetzten
