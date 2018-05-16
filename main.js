@@ -250,7 +250,7 @@ request(
 		adapter.log.debug('Request done');
 		
 		if (!error){
-			adapter.log.info(content);
+			
 			content =content.replace(/ /g, '_'); 	 //alle Leerzeichen durch Unterstrich ersetzten
 			var data=CSVToArray(result);         //CSV in ein Array einlesen
 			json = JSON.stringify(data);         //Array in einen String formatieren
