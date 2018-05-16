@@ -116,7 +116,7 @@ var stateanlegen = true;
         common: {
             name: 'VERSION',
             type: 'string',
-            role: 'pool',
+            role: 'value,
             read: true,
             write: false
         },
@@ -128,7 +128,7 @@ var stateanlegen = true;
         common: {
             name: 'RESET_ROOT_CAUSE',
             type: 'number',
-            role: 'pool',            
+            role: 'value,            
             read: true,
             write: false
         },
@@ -140,7 +140,7 @@ var stateanlegen = true;
         common: {
             name: 'pH-_DOSAGE_RELAIS_ID',
             type: 'number',
-            role: 'pool',
+            role: 'value,
             read: true,
             write: false
         },
@@ -152,7 +152,7 @@ var stateanlegen = true;
         common: {
             name: 'pH+_DOSAGE_RELAIS_ID',
             type: 'number',
-            role: 'pool',
+            role: 'value,
             read: true,
             write: false
         },
@@ -164,7 +164,7 @@ var stateanlegen = true;
         common: {
             name: 'NTP_FAULT_STATE',
             type: 'number',
-            role: 'pool',
+            role: 'value,
             read: true,
             write: false
         },
@@ -176,7 +176,7 @@ var stateanlegen = true;
         common: {
             name: 'DOSAGE_CNTRL',
             type: 'number',
-            role: 'pool',
+            role: 'value,
             read: true,
             write: false
         },
@@ -188,7 +188,7 @@ var stateanlegen = true;
         common: {
             name: 'CPU_TIME',
             type: 'number',
-            role: 'pool',
+            role: 'value,
             read: true,
             write: false
         },
@@ -200,7 +200,7 @@ var stateanlegen = true;
         common: {
             name: 'CONFIG_OTHER_ENABLE',
             type: 'number',
-            role: 'pool',
+            role: 'value,
             read: true,
             write: false
         },
@@ -212,7 +212,7 @@ var stateanlegen = true;
         common: {
             name: 'Chlor_DOSAGE_RELAIS_ID',
             type: 'number',
-            role: 'pool',
+            role: 'value,
             read: true,
             write: false
         },
