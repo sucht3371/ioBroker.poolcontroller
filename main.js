@@ -258,10 +258,9 @@ var stateanlegen = true;
          var wert =  offset + ( gain * value);
         adapter.setState(+jdata[1][i], parseFloat(Number(wert).toFixed(2)));
          }    
-    console.log("Variablen updated");
-  }
-    }).on("error", function (e) {console.error(e);});
-  } catch (e) { console.error(e); }
+      }
+    })
+  } 
 });
 
 
