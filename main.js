@@ -109,19 +109,38 @@ var stateanlegen = true;
 
 //SYSINFO Variablen anlegen
    
- adapter.setObject('sysinfo.version', {
+ adapter.setObject('sysinfo.VERSION', {
         type: 'state',
         common: {
-            name: 'version',
+            name: 'VERSION',
             type: 'string',
             read: true,
             write: false
         },
         native: {}
     });               
-                
+ 
+ adapter.setObject('sysinfo.RESET_ROOT_CAUSE', {
+        type: 'state',
+        common: {
+            name: 'RESET_ROOT_CAUSE',
+            type: 'number',
+            read: true,
+            write: false
+        },
+        native: {}
+    });               
 
-//var url="http://" + host + ":" + port + "/GetState.csv"
+ adapter.setObject('sysinfo.pH-_DOSAGE_RELAIS_ID', {
+        type: 'state',
+        common: {
+            name: 'pH-_DOSAGE_RELAIS_ID',
+            type: 'number',
+            read: true,
+            write: false
+        },
+        native: {}
+    });//var url="http://" + host + ":" + port + "/GetState.csv"
 
 //request(
 //	{
