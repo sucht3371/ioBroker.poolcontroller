@@ -244,7 +244,7 @@ var stateanlegen = true;
 
 request(
 	{
-		url: "http://" + host + "/GetState.csv"
+		url: "http://" + host + ":" + port + "/GetState.csv"
 			},
 	function(error, responce, content)	{
 		adapter.log.debug('Request done');
