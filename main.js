@@ -140,7 +140,79 @@ var stateanlegen = true;
             write: false
         },
         native: {}
-    });//var url="http://" + host + ":" + port + "/GetState.csv"
+    });
+    
+ adapter.setObject('sysinfo.pH+_DOSAGE_RELAIS_ID', {
+        type: 'state',
+        common: {
+            name: 'pH+_DOSAGE_RELAIS_ID',
+            type: 'number',
+            read: true,
+            write: false
+        },
+        native: {}
+    });
+    
+ adapter.setObject('sysinfo.NTP_FAULT_STATE', {
+        type: 'state',
+        common: {
+            name: 'NTP_FAULT_STATE',
+            type: 'number',
+            read: true,
+            write: false
+        },
+        native: {}
+    });
+
+ adapter.setObject('sysinfo.DOSAGE_CNTRL', {
+        type: 'state',
+        common: {
+            name: 'DOSAGE_CNTRL',
+            type: 'number',
+            read: true,
+            write: false
+        },
+        native: {}
+    });
+    
+ adapter.setObject('sysinfo.CPU_TIME', {
+        type: 'state',
+        common: {
+            name: 'CPU_TIME',
+            type: 'number',
+            read: true,
+            write: false
+        },
+        native: {}
+    });
+    
+ adapter.setObject('sysinfo.CONFIG_OTHER_ENABLE', {
+        type: 'state',
+        common: {
+            name: 'CONFIG_OTHER_ENABLE',
+            type: 'number',
+            read: true,
+            write: false
+        },
+        native: {}
+    });
+    
+  adapter.setObject('sysinfo.Chlor_DOSAGE_RELAIS_ID', {
+        type: 'state',
+        common: {
+            name: 'Chlor_DOSAGE_RELAIS_ID',
+            type: 'number',
+            read: true,
+            write: false
+        },
+        native: {}
+    });
+   
+
+
+    
+    
+    //var url="http://" + host + ":" + port + "/GetState.csv"
 
 //request(
 //	{
