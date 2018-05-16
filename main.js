@@ -101,22 +101,36 @@ var port = adapter.config.port
 var interval = adapter.config.interval
 
 
+var url='http://192.168.178.35:80/GetState.csv'
+
+//*********************************************************************
+var result, json;
+var stateanlegen = true;
+
+//SYSINFO Variablen anlegen
+       createState('poolcontroller.0.SYSINFO.VERSION', {
+        name: 'VERSION',
+        type: 'string',
+        write: false,
+        read:  true
+        });
+
 //var url="http://" + host + ":" + port + "/GetState.csv"
 
-request(
+//request(
 	{
-		url: "http://192.168.178.35/GetState.csv"
-	},
-	function(error, content)	{
-		adapter.log.debug('Request done');
+//		url: "http://192.168.178.35/GetState.csv"
+//	},
+//	function(error, content)	{
+//		adapter.log.debug('Request done');
 		
 //		if (!error&& responce.statuscode == 200){
 //			adapter.log.info(content);
 //		} else 	{
 //			adapter.log.error(error);
 //		}		
-	}
-		);
+//	}
+//		);
 
 
 
