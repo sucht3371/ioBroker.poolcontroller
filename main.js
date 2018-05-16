@@ -259,7 +259,7 @@ var stateanlegen = true;
         adapter.setState(+jdata[1][i], parseFloat(Number(wert).toFixed(2)));
          }    
       }
-    })
+    }
   } 
 });
 
