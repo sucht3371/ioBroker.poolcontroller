@@ -222,6 +222,8 @@ request(
 			    adapter.setState('sysinfo.Chlor_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][9]).toFixed(2)));
 			  
 			  
+		while (true)
+		{		
 			   // User Variablen mit aktuellen Werten beschreiben
 			   i=0; 
 			    for (i=0; i<=41;i++){
@@ -237,6 +239,8 @@ request(
 			   setTimeout(function() {
 			   		adapter.log.info("warten");
 			   },10000);				
+			
+		}	
 			
 			
 		} 
