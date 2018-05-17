@@ -287,7 +287,7 @@ request(
    //    }    
     
     adapter.log.info("Variablen updated");    
- // }			
+  }			
 			//#########################################
 			
 			
