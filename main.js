@@ -245,10 +245,10 @@ request(
 			adapter.log.info(content);
 			//#########################################
 			
- adapter.setObjectNotExists(+jdata[1][1], {
+ adapter.setObjectNotExists(jdata[1][1], {
         type: 'state',
         common: {
-            name: +jdata[1][1],
+            name: jdata[1][1],
             type: 'number',
             role: 'value',
             read: true,
