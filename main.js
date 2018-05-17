@@ -236,9 +236,9 @@ request(
 			       }    
 			    
 			   adapter.log.info("Variablen updated"); 
-		//	   setTimeout(function() {
-		//	   		adapter.log.info("warten");
-		//	   },10000);				
+			   setTimeout(function() {
+			   		adapter.log.info("warten");
+			   },10000);				
 			
 	
 			
