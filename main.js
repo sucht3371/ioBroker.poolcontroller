@@ -1,36 +1,4 @@
-/**
- *
- * poolcontroller adapter
- *
- *
- *  file io-package.json comments:
- *
- *  {
- *      "common": {
- *          "name":         "poolcontroller",                  // name has to be set and has to be equal to adapters folder name and main file name excluding extension
- *          "version":      "0.0.0",                    // use "Semantic Versioning"! see http://semver.org/
- *          "title":        "Node.js poolcontroller Adapter",  // Adapter title shown in User Interfaces
- *          "authors":  [                               // Array of authord
- *              "name <mail@poolcontroller.com>"
- *          ]
- *          "desc":         "poolcontroller adapter",          // Adapter description shown in User Interfaces. Can be a language object {de:"...",ru:"..."} or a string
- *          "platform":     "Javascript/Node.js",       // possible values "javascript", "javascript/Node.js" - more coming
- *          "mode":         "daemon",                   // possible values "daemon", "schedule", "subscribe"
- *          "materialize":  true,                       // support of admin3
- *          "schedule":     "0 0 * * *"                 // cron-style schedule. Only needed if mode=schedule
- *          "loglevel":     "info"                      // Adapters Log Level
- *      },
- *      "native": {                                     // the native object is available via adapter.config in your adapters code - use it for configuration
- *          "test1": true,
- *          "test2": 42,
- *          "mySelect": "auto"
- *      }
- *  }
- *
- */
 
-/* jshint -W097 */// jshint strict:false
-/*jslint node: true */
 'use strict';
 
 // you have to require the utils module and call adapter function
@@ -92,21 +60,11 @@ function main() {
   //  adapter.log.info('config port: '    + adapter.config.port);
   //  adapter.log.info('config interval: ' + adapter.config.interval);
 
-
-
-
-
 var host = adapter.config.host
 var port = adapter.config.port
 var interval = adapter.config.interval
-
-
-
-
-
-//*********************************************************************
 var result, json;
-var stateanlegen = true;
+
 
 //SYSINFO Variablen anlegen
    
@@ -234,22 +192,18 @@ request(
 			var data=CSVToArray(content);         //CSV in ein Array einlesen
 			json = JSON.stringify(data);         //Array in einen String formatieren
 			var jdata = JSON.parse(json);        //Json Array erzeugen
-			var arr1 = jdata[0];				// Array 0 von ingesamt 6, weil 6 Zeilen im CVS mit \n getrennt
-			var arr2 = jdata[1];                 // Array 1-5 haben je 42 einzelne  Daten
-			var arr3 = jdata[2];
-			var arr4 = jdata[3];
-			var arr5 = jdata[4];
-			var arr6 = jdata[5];			
-		//	adapter.log.info(jdata[1][1]);
-		//	adapter.log.info('hallo');
-		//	adapter.log.info(content);
-			//#########################################
-			
+//			var arr1 = jdata[0];				// Array 0 von ingesamt 6, weil 6 Zeilen im CVS mit \n getrennt
+//			var arr2 = jdata[1];                 // Array 1-5 haben je 42 einzelne  Daten
+//			var arr3 = jdata[2];
+//			var arr4 = jdata[3];
+//			var arr5 = jdata[4];
+//			var arr6 = jdata[5];			
+
 
 			
 			
 			
-			 // if (stateanlegen === true){
+			
     // User Variablen anlegen Achtung keine Punkte im Namen verwenden. 
     var i=0;
     for (i=0; i<=41;i++){
