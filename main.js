@@ -249,11 +249,17 @@ request(
     //var i=0;
     //for (i=0; i<=41;i++){
         adapter.setObjectNotExists(+jdata[1][1], {
-        name: ''+jdata[1][1],
-        type: 'number',
-        unit: ''+jdata[2][1],
-        write: false,
-        read:  true
+        type: 'state',
+        common:   {              
+        	name: ''+jdata[1][1],
+        	type: 'number',
+        	unit: ''+jdata[2][1],
+        	role: 'value',
+        	write: false,
+        	read:  true
+        },
+        native: {}	
+        	
         });
     //}
     
