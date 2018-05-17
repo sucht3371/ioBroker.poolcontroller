@@ -114,7 +114,7 @@ var stateanlegen = true;
         type: 'state',
         common: {
             name: 'VERSION',
-            type: 'string',
+            type: 'number',
             role: 'value',
             read: true,
             write: false
@@ -264,7 +264,7 @@ request(
   else {
   
   //SYSINFO Variablen mit aktuellen Werten beschreiben 
-  //  adapter.setState('sysinfo.VERSION', jdata[0][1]);
+    adapter.setState('sysinfo.VERSION', jdata[0][1]);
     adapter.setState('sysinfo.CPU_TIME', parseFloat(Number(jdata[0][2]).toFixed(2)));
     adapter.setState('sysinfo.RESET_ROOT_CAUSE', parseFloat(Number(jdata[0][3]).toFixed(2))); 
     adapter.setState('sysinfo.NTP_FAULT_STATE', parseFloat(Number(jdata[0][4]).toFixed(2)));
