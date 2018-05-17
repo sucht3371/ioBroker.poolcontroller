@@ -46,7 +46,7 @@
             "nl": "docs/nl/admin.md",
             "pt": "docs/pt/admin.md"
         },
-        "localLink": "http://%host%/gui/phase2/index.htm:80",
+        "localLink": "http://%host%:80/gui/phase2/index.htm",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
         "schedule": "*/1 * * * *",        
