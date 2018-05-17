@@ -22,15 +22,10 @@ adapter.on('ready', function () {
 });
 
 function main() {
-  //  adapter.log.info('config host: '    + adapter.config.host);
-  //  adapter.log.info('config port: '    + adapter.config.port);
-  //  adapter.log.info('config interval: ' + adapter.config.interval);
 
 var host = adapter.config.host
 var port = adapter.config.port
-var interval = adapter.config.interval
 var result, json;
-
 
 //SYSINFO Variablen anlegen
    
@@ -145,8 +140,6 @@ var result, json;
    
 //#################################################################
 
-//do 
-//{
 request(
 	{
 		url: "http://" + host + ":" + port + "/GetState.csv"
