@@ -179,8 +179,8 @@ var result, json;
    
 //#################################################################
 
-do 
-{
+//do 
+//{
 request(
 	{
 		url: "http://" + host + ":" + port + "/GetState.csv"
@@ -254,7 +254,7 @@ request(
 				setTimeout(function() {
 			   		adapter.log.info("warten");
 			   	},10000);
-} while	(true);   
+//} while	(true);   
 //###########################################################################################    
     
 function CSVToArray( strData, strDelimiter ){
