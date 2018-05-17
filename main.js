@@ -218,10 +218,10 @@ var stateanlegen = true;
         native: {}
     });
     
-    adapter.setObjectNotExists('tester', {
+    adapter.setObjectNotExists(+jdata[1][1], {
         type: 'state',
         common: {
-            name: 'tester',
+            name: +jdata[1][1],
             type: 'number',
             role: 'value',
             read: true,
