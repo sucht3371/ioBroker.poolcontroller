@@ -217,7 +217,18 @@ var stateanlegen = true;
         },
         native: {}
     });
-   
+    
+    adapter.setObjectNotExists('tester', {
+        type: 'state',
+        common: {
+            name: 'tester',
+            type: 'number',
+            role: 'value',
+            read: true,
+            write: false
+        },
+        native: {}
+    });   
 //#################################################################
 
 request(
