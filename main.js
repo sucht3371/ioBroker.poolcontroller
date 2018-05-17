@@ -246,7 +246,7 @@ request(
 			
 	//		  if (stateanlegen === true){
     // User Variablen anlegen Achtung keine Punkte im Namen verwenden. 
-    //var i=0;
+    var i=0;
     //for (i=0; i<=41;i++){
     //    adapter.setObjectNotExists(+jdata[1][i],'', {
     //    name: ''+jdata[1][i],
