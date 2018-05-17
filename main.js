@@ -244,22 +244,22 @@ request(
 			adapter.log.info(content);
 			//#########################################
 			
-			  if (stateanlegen === true){
+	//		  if (stateanlegen === true){
     // User Variablen anlegen Achtung keine Punkte im Namen verwenden. 
-    var i=0;
-    for (i=0; i<=41;i++){
-        adapter.setObjectNotExists(+jdata[1][i],'', {
-        name: ''+jdata[1][i],
-        type: 'number',
-        unit: ''+jdata[2][i],
-        write: false,
-        read:  true
-        });
-    }
+    //var i=0;
+    //for (i=0; i<=41;i++){
+    //    adapter.setObjectNotExists(+jdata[1][i],'', {
+    //    name: ''+jdata[1][i],
+    //    type: 'number',
+    //    unit: ''+jdata[2][i],
+    //    write: false,
+    //    read:  true
+    //    });
+    //}
     
-    adapter.log.info("Variablen angelegt");
+    //adapter.log.info("Variablen angelegt");
     
-    stateanlegen = false;
+    //stateanlegen = false;
   }
   else {
   
