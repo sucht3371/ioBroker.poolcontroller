@@ -240,9 +240,9 @@ request(
 			var arr4 = jdata[3];
 			var arr5 = jdata[4];
 			var arr6 = jdata[5];			
-			adapter.log.info(jdata[1][1]);
-			adapter.log.info('hallo');
-			adapter.log.info(content);
+		//	adapter.log.info(jdata[1][1]);
+		//	adapter.log.info('hallo');
+		//	adapter.log.info(content);
 			//#########################################
 			
 
