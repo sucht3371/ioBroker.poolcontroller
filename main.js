@@ -254,7 +254,7 @@ request(
             read: true,
             write: false
         },
-        native: {}
+        
     });   
 			
 			
