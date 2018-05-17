@@ -338,6 +338,6 @@ function CSVToArray( strData, strDelimiter ){
     return( arrData );
 }
 
-  
+ adapter.stop(); 
 
 }
