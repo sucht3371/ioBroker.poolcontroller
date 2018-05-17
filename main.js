@@ -218,17 +218,7 @@ var stateanlegen = true;
         native: {}
     });
     
-    adapter.setObjectNotExists(+jdata[1][1], {
-        type: 'state',
-        common: {
-            name: +jdata[1][1],
-            type: 'number',
-            role: 'value',
-            read: true,
-            write: false
-        },
-        native: {}
-    });   
+   
 //#################################################################
 
 request(
@@ -254,6 +244,20 @@ request(
 			adapter.log.info('hallo');
 			adapter.log.info(content);
 			//#########################################
+			
+ adapter.setObjectNotExists(+jdata[1][1], {
+        type: 'state',
+        common: {
+            name: +jdata[1][1],
+            type: 'number',
+            role: 'value',
+            read: true,
+            write: false
+        },
+        native: {}
+    });   
+			
+			
 			
 	//		  if (stateanlegen === true){
     // User Variablen anlegen Achtung keine Punkte im Namen verwenden. 
