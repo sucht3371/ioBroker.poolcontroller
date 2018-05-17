@@ -12,10 +12,10 @@
                 "nl": "Eerste release"
             }
         },
-		"title": "Poolcontroller adapter",
+		"title": "Poolcontroller Adapter",
         "titleLang": {
             "en": "poolcontroller adapter",
-            "de": "Poolcontroller adapter",
+            "de": "Poolcontroller Adapter",
             "ru": "Адаптер шаблонов на основе Javascript / Node.js",
             "pt": "Adaptador de modelo baseado em Javascript / Node.js",
             "nl": "Javascript / Node.js gebaseerde sjabloonadapter",
@@ -49,7 +49,7 @@
         "localLink": "http://%host%/gui/phase2/index.htm",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
-        "schedule": "*/1 * * * *",     
+        "schedule": "* * * * *",     
         "icon": "poolcontroller.png",
         "materialize": true,
         "enabled": true,
