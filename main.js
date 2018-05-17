@@ -251,11 +251,10 @@ request(
 	}
 );
 
-} while	(  setTimeout(function() {
+				setTimeout(function() {
 			   		adapter.log.info("warten");
-			   },10000);	
-
-        );   
+			   	},10000);
+} while	(true);   
 //###########################################################################################    
     
 function CSVToArray( strData, strDelimiter ){
