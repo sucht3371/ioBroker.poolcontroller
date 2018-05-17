@@ -261,7 +261,7 @@ request(
     
     stateanlegen = false;
   }
-  else {
+  //else {
   
   //SYSINFO Variablen mit aktuellen Werten beschreiben 
     adapter.setState('sysinfo.VERSION', jdata[0][1]);
@@ -284,10 +284,10 @@ request(
   //     var value =   parseFloat(jdata[5][i]);
   //       var wert =  offset + ( gain * value);
   //      adapter.setState(+jdata[1][i], parseFloat(Number(wert).toFixed(2)));
-         }    
+    //     }    
     
-    adapter.log.info("Variablen updated");    
-  }			
+   // adapter.log.info("Variablen updated");    
+ // }			
 			//#########################################
 			
 			
