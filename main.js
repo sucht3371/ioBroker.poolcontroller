@@ -250,9 +250,8 @@ request(
 		}		
 	}
 );
-
-				
-//} while	(true);   
+adapter.stop(); 				
+  
 //###########################################################################################    
     
 function CSVToArray( strData, strDelimiter ){
@@ -338,6 +337,6 @@ function CSVToArray( strData, strDelimiter ){
     return( arrData );
 }
 
- adapter.stop(); 
+ 
 
 }
