@@ -249,7 +249,7 @@ request(
 			
 			
 			
-			  if (stateanlegen === true){
+			 // if (stateanlegen === true){
     // User Variablen anlegen Achtung keine Punkte im Namen verwenden. 
     var i=0;
     for (i=0; i<=41;i++){
@@ -265,13 +265,13 @@ request(
         },        
         	
         });
-    }
+   // }
     
     adapter.log.info("Variablen angelegt");
     
     stateanlegen = false;
   }
-  else {
+  //else {
   
   //SYSINFO Variablen mit aktuellen Werten beschreiben 
     adapter.setState('sysinfo.VERSION', jdata[0][1]);
@@ -297,7 +297,7 @@ request(
        }    
     
    adapter.log.info("Variablen updated");    
-  }			
+  //}			
 			//#########################################
 			
 			
