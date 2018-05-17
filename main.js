@@ -187,7 +187,9 @@ request(
 			adapter.log.debug('Request done');
 			
 			if (!error){
-				
+
+   		while (true)
+		{					
 				content =content.replace(/ /g, '_'); 	 //alle Leerzeichen durch Unterstrich ersetzten
 				var data=CSVToArray(content);         //CSV in ein Array einlesen
 				json = JSON.stringify(data);         //Array in einen String formatieren
@@ -222,8 +224,7 @@ request(
 			    adapter.setState('sysinfo.Chlor_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][9]).toFixed(2)));
 			  
 			  
-		while (true)
-		{		
+	
 			   // User Variablen mit aktuellen Werten beschreiben
 			   i=0; 
 			    for (i=0; i<=41;i++){
@@ -240,7 +241,7 @@ request(
 			   		adapter.log.info("warten");
 			   },10000);				
 			
-		}	
+	}	
 			
 			
 		} 
