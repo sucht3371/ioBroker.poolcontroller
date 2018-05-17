@@ -88,9 +88,9 @@ adapter.on('ready', function () {
 });
 
 function main() {
-    adapter.log.info('config host: '    + adapter.config.host);
-    adapter.log.info('config port: '    + adapter.config.port);
-    adapter.log.info('config interval: ' + adapter.config.interval);
+  //  adapter.log.info('config host: '    + adapter.config.host);
+  //  adapter.log.info('config port: '    + adapter.config.port);
+  //  adapter.log.info('config interval: ' + adapter.config.interval);
 
 
 
