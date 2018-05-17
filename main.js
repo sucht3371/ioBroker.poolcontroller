@@ -234,7 +234,7 @@ request(
 			       }    
 			    
 			   adapter.log.info("Variablen updated"); 
-			   setTimeout(funktion() {
+			   setTimeout(function() {
 			   		adapter.log.info("warten");
 			   },10000);				
 			
