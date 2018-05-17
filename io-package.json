@@ -46,14 +46,15 @@
             "nl": "docs/nl/admin.md",
             "pt": "docs/pt/admin.md"
         },
-        "localLink": "http://%host%:80",
+        "localLink": "http://%host%/gui/phase2/index.htm:80",
         "platform": "Javascript/Node.js",
-        "mode": "daemon",
+        "mode": "schedule",
+        "schedule": "*/1 * * * *",        
         "icon": "poolcontroller.png",
         "materialize": true,
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/sucht3371/ioBroker.poolcontroller/master/admin/poolcontroller.png",    
-        "keywords": ["poolcontroller", "vis", "GUI", "graphical", "scada"],
+        "keywords": ["poolcontroller", "hausautomatisierung", "pool", "pooldaten", "smarthome"],
         "readme": "https://github.com/sucht3371/ioBroker.poolcontroller/blob/master/README.md",
         "loglevel": "info",
         "type": "general"
