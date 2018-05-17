@@ -249,29 +249,29 @@ request(
 			
 			
 			
-	//		  if (stateanlegen === true){
+			  if (stateanlegen === true){
     // User Variablen anlegen Achtung keine Punkte im Namen verwenden. 
-    //var i=0;
-    //for (i=0; i<=41;i++){
-        adapter.setObjectNotExists(+jdata[1][1], {
+    var i=0;
+    for (i=0; i<=41;i++){
+        adapter.setObjectNotExists(jdata[1][i], {
         type: 'state',
         common:   {              
-        	name: ''jdata[1][1],
+        	name: jdata[1][i],
         	type: 'number',
-        	unit: ''jdata[2][1],
+        	unit: jdata[2][i],
         	role: 'value',
         	write: false,
         	read:  true
         },        
         	
         });
-    //}
+    }
     
-    //adapter.log.info("Variablen angelegt");
+    adapter.log.info("Variablen angelegt");
     
-    //stateanlegen = false;
-  //}
-  //else {
+    stateanlegen = false;
+  }
+  else {
   
   //SYSINFO Variablen mit aktuellen Werten beschreiben 
     adapter.setState('sysinfo.VERSION', jdata[0][1]);
@@ -297,7 +297,7 @@ request(
    //    }    
     
     //adapter.log.info("Variablen updated");    
-  //}			
+  }			
 			//#########################################
 			
 			
