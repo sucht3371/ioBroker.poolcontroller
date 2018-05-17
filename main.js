@@ -260,8 +260,8 @@ request(
     //adapter.log.info("Variablen angelegt");
     
     //stateanlegen = false;
-  }
-  else {
+  //}
+  //else {
   
   //SYSINFO Variablen mit aktuellen Werten beschreiben 
     adapter.setState('sysinfo.VERSION', jdata[0][1]);
@@ -286,8 +286,8 @@ request(
    //     adapter.setState(+jdata[1][i], parseFloat(Number(wert).toFixed(2)));
    //    }    
     
-    adapter.log.info("Variablen updated");    
-  }			
+    //adapter.log.info("Variablen updated");    
+  //}			
 			//#########################################
 			
 			
