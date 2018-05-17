@@ -245,17 +245,7 @@ request(
 			adapter.log.info(content);
 			//#########################################
 			
- adapter.setObjectNotExists(jdata[1][1], {
-        type: 'state',
-        common: {
-            name: jdata[1][1],
-            type: 'number',
-            role: 'value',
-            read: true,
-            write: false
-        },
-        
-    });   
+
 			
 			
 			
@@ -266,14 +256,13 @@ request(
         adapter.setObjectNotExists(+jdata[1][1], {
         type: 'state',
         common:   {              
-        	name: ''+jdata[1][1],
+        	name: ''jdata[1][1],
         	type: 'number',
-        	unit: ''+jdata[2][1],
+        	unit: ''jdata[2][1],
         	role: 'value',
         	write: false,
         	read:  true
-        },
-        native: {}	
+        },        
         	
         });
     //}
