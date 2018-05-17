@@ -267,9 +267,9 @@ request(
         });
    // }
     
-    adapter.log.info("Variablen angelegt");
+    //adapter.log.info("Variablen angelegt");
     
-    stateanlegen = false;
+   // stateanlegen = false;
   }
   //else {
   
