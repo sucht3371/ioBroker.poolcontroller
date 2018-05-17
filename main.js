@@ -188,8 +188,7 @@ request(
 			
 			if (!error){
 
-  // 		while (true)
-	//	{					
+  	
 				content =content.replace(/ /g, '_'); 	 //alle Leerzeichen durch Unterstrich ersetzten
 				var data=CSVToArray(content);         //CSV in ein Array einlesen
 				json = JSON.stringify(data);         //Array in einen String formatieren
@@ -241,7 +240,7 @@ request(
 			   		adapter.log.info("warten");
 			   },10000);				
 			
-	//}	
+	
 			
 			
 		} 
