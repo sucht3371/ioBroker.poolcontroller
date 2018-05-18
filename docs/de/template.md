@@ -1,3 +1,3 @@
 # Das ist die Dokumentation
 
-(Picture)[img/poolcontroller.png)
+[Picture](img/poolcontroller.png)
