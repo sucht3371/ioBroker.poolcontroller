@@ -26,8 +26,8 @@
             "Michael Voelker <mv@netcompsys.de>"
         ],
         "docs": {
-            "en": "docs/en/poolcontroller.md",
-            "de": "docs/de/poolcontroller.md"
+            "en": "docs/en/template.md",
+            "de": "docs/de/template.md"
         },
         "localLink": "http://%host%/gui/phase2/index.htm",
         "platform": "Javascript/Node.js",
