@@ -43,11 +43,12 @@
         "type": "general"
     },
     "native": {
-        "host": "0.0.0.0",
+        "host": "",
         "port": 80
         
     },
-    "objects": [
+    "objects": [],    
+    "instanceObjects": [
     	{
 			"_id": "sysinfo.VERSION", 
 	        "type": "state",
