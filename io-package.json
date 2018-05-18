@@ -43,9 +43,9 @@
         "type": "general"
     },
     "native": {
-        "test1": true,
-        "test2": 42,
-        "mySelect": "auto"
+        "host": true,
+        "port": 80
+        
     },
     "objects": [
 
