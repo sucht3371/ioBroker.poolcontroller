@@ -59,8 +59,109 @@
 	            "write": false
 	        },
              "native": {}
-        }
-
+        },
+     	{
+			"_id": "sysinfo.RESET_ROOT_CAUSE", 
+	        "type": "state",
+	        "common": {
+	            "name": "RESET_ROOT_CAUSE",
+	            "type": "number",
+	            "role": "value",
+	            "read": true,
+	            "write": false
+	        },
+             "native": {}
+        },       
+     	{
+			"_id": "sysinfo.pH-_DOSAGE_RELAIS_ID", 
+	        "type": "state",
+	        "common": {
+	            "name": "pH-_DOSAGE_RELAIS_ID",
+	            "type": "number",
+	            "role": "value",
+	            "read": true,
+	            "write": false
+	        },
+             "native": {}
+        },     
+        
+      	{
+			"_id": "sysinfo.pH+_DOSAGE_RELAIS_ID", 
+	        "type": "state",
+	        "common": {
+	            "name": "pH+_DOSAGE_RELAIS_ID",
+	            "type": "number",
+	            "role": "value",
+	            "read": true,
+	            "write": false
+	        },
+             "native": {}
+        },     
+        
+     	{
+			"_id": "sysinfo.NTP_FAULT_STATE", 
+	        "type": "state",
+	        "common": {
+	            "name": "NTP_FAULT_STATE",
+	            "type": "number",
+	            "role": "value",
+	            "read": true,
+	            "write": false
+	        },
+             "native": {}
+        },     
+        
+     	{
+			"_id": "sysinfo.DOSAGE_CNTRL", 
+	        "type": "state",
+	        "common": {
+	            "name": "DOSAGE_CNTRL",
+	            "type": "number",
+	            "role": "value",
+	            "read": true,
+	            "write": false
+	        },
+             "native": {}
+        },     
+        
+     	{
+			"_id": "sysinfo.CPU_TIME", 
+	        "type": "state",
+	        "common": {
+	            "name": "sysinfo.CPU_TIME",
+	            "type": "number",
+	            "role": "value",
+	            "read": true,
+	            "write": false
+	        },
+             "native": {}
+        },     
+        
+      	{
+			"_id": "sysinfo.CONFIG_OTHER_ENABLE", 
+	        "type": "state",
+	        "common": {
+	            "name": "CONFIG_OTHER_ENABLE",
+	            "type": "number",
+	            "role": "value",
+	            "read": true,
+	            "write": false
+	        },
+             "native": {}
+        },     
+        
+     	{
+			"_id": "sysinfo.Chlor_DOSAGE_RELAIS_ID", 
+	        "type": "state",
+	        "common": {
+	            "name": "sysinfo.Chlor_DOSAGE_RELAIS_ID",
+	            "type": "number",
+	            "role": "value",
+	            "read": true,
+	            "write": false
+	        },
+             "native": {}
+        }     
     ]
 }
 
