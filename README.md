@@ -2,7 +2,8 @@
 # ioBroker.poolcontroller
 =================
 
-This adapter is a poolcontroller for the creation of an ioBroker adapter. You do not need it at least that you plan developing your own adapter.
+This adapter is for reading values ​​from the pool controller. This pool controller is from www.pooldigital.de.
+A demo of the controller can be found at http://demo.poolcontroller.de/gui/phase2/
 
 ### 0.2.1
 * (MichaelVoelker) final release
