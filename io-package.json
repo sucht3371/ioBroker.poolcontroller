@@ -1,16 +1,27 @@
 {
     "common": {
         "name": "poolcontroller",
-        "version": "0.0.1",
+        "version": "0.2.1",
         "news": {
+        		"0.2.1": {
+			        "en": "final version",
+			        "de": "Finale Version",
+			        "ru": "Первоначальная версия",
+			        "pt": "Versão inicial",
+			        "nl": "Oorspronkelijke versie",
+			        "fr": "Version initiale",
+			        "it": "Versione iniziale",
+			        "es": "Versión inicial",
+			        "pl": "Początkowa wersja"
+			      }        
                 "0.0.1": {
-                "en": "initial adapter",
-                "de": "Initiale Version",
-                "ru": "Первоначальный адаптер",
-                "pt": "Versão inicial",
-                "fr": "Version initiale",
-                "nl": "Eerste release"
-            }
+	                "en": "initial adapter",
+	                "de": "Initiale Version",
+	                "ru": "Первоначальный адаптер",
+	                "pt": "Versão inicial",
+	                "fr": "Version initiale",
+	                "nl": "Eerste release"
+	            }
         },
 		"title": "Poolcontroller Adapter",
         "titleLang": {
