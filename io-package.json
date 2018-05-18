@@ -6,13 +6,6 @@
         		"0.2.1": {
 			        "en": "final version",
 			        "de": "Finale Version",
-			        "ru": "Первоначальная версия",
-			        "pt": "Versão inicial",
-			        "nl": "Oorspronkelijke versie",
-			        "fr": "Version initiale",
-			        "it": "Versione iniziale",
-			        "es": "Versión inicial",
-			        "pl": "Początkowa wersja"
 			      }        
                 "0.0.1": {
 	                "en": "initial adapter",
@@ -49,13 +42,7 @@
         ],
         "docs": {
             "en": "docs/en/admin.md",
-            "ru": "docs/ru/admin.md",
-            "de": "docs/de/admin.md",
-            "es": "docs/es/admin.md",
-            "it": "docs/it/admin.md",
-            "fr": "docs/fr/admin.md",
-            "nl": "docs/nl/admin.md",
-            "pt": "docs/pt/admin.md"
+            "de": "docs/de/admin.md"
         },
         "localLink": "http://%host%/gui/phase2/index.htm",
         "platform": "Javascript/Node.js",
