@@ -38,7 +38,7 @@ var result, json;
             read: true,
             write: false
         },
-        native: {}
+        
     });               
  
  adapter.setObjectNotExists('sysinfo.RESET_ROOT_CAUSE', {
@@ -50,7 +50,7 @@ var result, json;
             read: true,
             write: false
         },
-        native: {}
+        
     });               
 
  adapter.setObjectNotExists('sysinfo.pH-_DOSAGE_RELAIS_ID', {
@@ -62,7 +62,7 @@ var result, json;
             read: true,
             write: false
         },
-        native: {}
+        
     });
     
  adapter.setObjectNotExists('sysinfo.pH+_DOSAGE_RELAIS_ID', {
@@ -74,7 +74,7 @@ var result, json;
             read: true,
             write: false
         },
-        native: {}
+        
     });
     
  adapter.setObjectNotExists('sysinfo.NTP_FAULT_STATE', {
@@ -86,7 +86,7 @@ var result, json;
             read: true,
             write: false
         },
-        native: {}
+        
     });
 
  adapter.setObjectNotExists('sysinfo.DOSAGE_CNTRL', {
@@ -98,7 +98,7 @@ var result, json;
             read: true,
             write: false
         },
-        native: {}
+        
     });
     
  adapter.setObjectNotExists('sysinfo.CPU_TIME', {
@@ -110,7 +110,7 @@ var result, json;
             read: true,
             write: false
         },
-        native: {}
+        
     });
     
  adapter.setObjectNotExists('sysinfo.CONFIG_OTHER_ENABLE', {
@@ -122,7 +122,7 @@ var result, json;
             read: true,
             write: false
         },
-        native: {}
+        
     });
     
   adapter.setObjectNotExists('sysinfo.Chlor_DOSAGE_RELAIS_ID', {
@@ -134,7 +134,7 @@ var result, json;
             read: true,
             write: false
         },
-        native: {}
+        
     });
     
    
