@@ -5,18 +5,6 @@ var utils =    require(__dirname + '/lib/utils'); // Get common adapter utils
 var request = require('request');
 var adapter = new utils.Adapter('poolcontroller');
 
-adapter.on('message', function (obj) {
-    if (typeof obj === 'object' && obj.message) {
-        if (obj.command === 'send') {
-            // e.g. send email or pushover or whatever
-            console.log('send command');
-
-            // Send response in callback if required
-            if (obj.callback) adapter.sendTo(obj.from, obj.command, 'Message received', obj.callback);
-        }
-    }
-});
-
 adapter.on('ready', function () {
     main();
 });

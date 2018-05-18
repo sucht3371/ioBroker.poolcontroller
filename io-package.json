@@ -48,6 +48,23 @@
         
     },
     "objects": [
+    	{
+			"_id": "sysinfo.VERSION", 
+	        "type": "state",
+	        "common": {
+	            "name": "VERSION",
+	            "type": "number",
+	            "role": "value",
+	            "read": true,
+	            "write": false
+	        },
+             "native": {}
+        }
 
     ]
 }
+
+   
+
+
+
