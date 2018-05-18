@@ -4,7 +4,8 @@
 
 This adapter is a poolcontroller for the creation of an ioBroker adapter. You do not need it at least that you plan developing your own adapter.
 
-
+### 0.2.1
+* (MichaelVoelker) final release
 ### 0.0.1
 * (MichaelVoelker) initial release
 
