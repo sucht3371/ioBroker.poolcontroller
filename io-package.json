@@ -1,9 +1,13 @@
 {
     "common": {
         "name": "poolcontroller",
-        "version": "0.2.2",
+        "version": "0.2.3",
         "news": {
-        		    "0.2.2": {
+                "0.2.3": {
+                        "en": "adaption main",
+                        "de": "Anpassungen main"
+                            },
+     		"0.2.2": {
 	                "en": "adaption io-packages",
 	                "de": "Anpassungen io-packages"
 		            },
@@ -58,7 +62,7 @@
 	        "type": "state",
 	        "common": {
 	            "name": "VERSION",
-	            "type": "number",
+	            "type": "string",
 	            "role": "value",
 	            "read": true,
 	            "write": false

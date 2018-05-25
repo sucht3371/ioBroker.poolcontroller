@@ -5,6 +5,8 @@
 This adapter is for reading values ​​from the pool controller. This pool controller is from www.pooldigital.de.
 A demo of the controller can be found at http://demo.poolcontroller.de/gui/phase2/
 
+### 0.2.3
+* (MichaelVoelker) adaption main
 ### 0.2.2
 * (MichaelVoelker) adaption io-package
 ### 0.2.1

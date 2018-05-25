@@ -15,7 +15,7 @@ var host = adapter.config.host
 var port = adapter.config.port
 var result, json;
 
-   
+ 
 //#################################################################
 
 request(
@@ -24,63 +24,57 @@ request(
 			},
 		function(error, responce, content)	{
 			adapter.log.debug('Request done');
-			
+
 			if (!error){
 
-  	
+
 				content =content.replace(/ /g, '_'); 	 //alle Leerzeichen durch Unterstrich ersetzten
 				var data=CSVToArray(content);         //CSV in ein Array einlesen
-				json = JSON.stringify(data);         //Array in einen String formatieren
-				var jdata = JSON.parse(json);        //Json Array erzeugen
-								
+
 			    // User Variablen anlegen Achtung keine Punkte im Namen verwenden. 
 			    var i=0;
 			    for (i=0; i<=41;i++){
-			        adapter.setObjectNotExists(jdata[1][i], {
+			        adapter.setObjectNotExists(data[1][i], {
 			        type: 'state',
-			        common:   {              
-			        	name: jdata[1][i],
+			        common:   {
+			        	name: data[1][i],
 			        	type: 'number',
-			        	unit: jdata[2][i],
+			        	unit: data[2][i],
 			        	role: 'value',
 			        	write: false,
 			        	read:  true
-			        },        
-			        	
+			        },
 			        });
 			    }
-			   
-			    //SYSINFO Variablen mit aktuellen Werten beschreiben 
-			    adapter.setState('sysinfo.VERSION', jdata[0][1]);
-			    adapter.setState('sysinfo.CPU_TIME', parseFloat(Number(jdata[0][2]).toFixed(2)));
-			    adapter.setState('sysinfo.RESET_ROOT_CAUSE', parseFloat(Number(jdata[0][3]).toFixed(2))); 
-			    adapter.setState('sysinfo.NTP_FAULT_STATE', parseFloat(Number(jdata[0][4]).toFixed(2)));
-			    adapter.setState('sysinfo.CONFIG_OTHER_ENABLE', parseFloat(Number(jdata[0][5]).toFixed(2)));
-			    adapter.setState('sysinfo.DOSAGE_CNTRL', parseFloat(Number(jdata[0][6]).toFixed(2)));
-			    adapter.setState('sysinfo.pH+_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][7]).toFixed(2)));
-			    adapter.setState('sysinfo.pH-_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][8]).toFixed(2)));
-			    adapter.setState('sysinfo.Chlor_DOSAGE_RELAIS_ID', parseFloat(Number(jdata[0][9]).toFixed(2)));
-			  
-			  
-	
+
+			    //SYSINFO Variablen mit aktuellen Werten beschreiben
+			    adapter.setState('sysinfo.VERSION', data[0][1]);
+			    adapter.setState('sysinfo.CPU_TIME', parseFloat(Number(data[0][2]).toFixed(2)));
+			    adapter.setState('sysinfo.RESET_ROOT_CAUSE', parseFloat(Number(data[0][3]).toFixed(2)));
+			    adapter.setState('sysinfo.NTP_FAULT_STATE', parseFloat(Number(data[0][4]).toFixed(2)));
+			    adapter.setState('sysinfo.CONFIG_OTHER_ENABLE', parseFloat(Number(data[0][5]).toFixed(2)));
+			    adapter.setState('sysinfo.DOSAGE_CNTRL', parseFloat(Number(data[0][6]).toFixed(2)));
+			    adapter.setState('sysinfo.pH+_DOSAGE_RELAIS_ID', parseFloat(Number(data[0][7]).toFixed(2)));
+			    adapter.setState('sysinfo.pH-_DOSAGE_RELAIS_ID', parseFloat(Number(data[0][8]).toFixed(2)));
+			    adapter.setState('sysinfo.Chlor_DOSAGE_RELAIS_ID', parseFloat(Number(data[0][9]).toFixed(2)));
+
+
+
 			   // User Variablen mit aktuellen Werten beschreiben
 			   i=0; 
 			    for (i=0; i<=41;i++){
 			       var wert = offset + ( gain * value);
-			       var offset =  parseFloat(jdata[3][i]);
-			       var gain =   parseFloat(jdata[4][i]);
-			       var value =   parseFloat(jdata[5][i]);
+			       var offset =  parseFloat(data[3][i]);
+			       var gain =   parseFloat(data[4][i]);
+			       var value =   parseFloat(data[5][i]);
 			       var wert =  offset + ( gain * value);
-			       adapter.setState(jdata[1][i], parseFloat(Number(wert).toFixed(2)));
-			       }    
-			    
+			       adapter.setState(data[1][i], parseFloat(Number(wert).toFixed(2)));
+			       }
+
 			   adapter.log.info("Variablen updated"); 
-			   
-			   				
-			
-	
-			
-			
+
+
+
 		} 
 		else 	{
 			adapter.log.error(error);
