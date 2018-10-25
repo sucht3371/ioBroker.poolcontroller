@@ -32,7 +32,7 @@ request(
 				var data=CSVToArray(content);         //CSV in ein Array einlesen
 
 			    // User Variablen anlegen Achtung keine Punkte im Namen verwenden. 
-			    var i=0;
+	/*		    var i=0;
 			    for (i=0; i<=41;i++){
 			        adapter.setObjectNotExists(data[1][i], {
 			        type: 'state',
@@ -46,6 +46,156 @@ request(
 			        },
 			        });
 			    }
+			    //########################### hier neu 
+			    */
+			    var i=16;
+      
+    for (i=16; i<=23;i++){
+        adapter.setObjectNotExists('visButtons.Relais'+[i-16],'', {
+        name: data[1][i],
+        type: 'number',
+        write: true,
+        read:  true
+        });
+       }
+       i=28;
+       for (i=28; i<=35;i++){
+        adapter.setObjectNotExists('visButtons.Relais'+[i-20],'', {
+        name: data[1][i],
+        type: 'number',
+        write: true,
+        read:  true
+        });
+        }
+     i=0;
+    for (i=0; i<=41;i++){
+        if (i===0){
+        adapter.setObjectNotExists(data[1][i],'', {
+        name: data[1][i],
+        type: 'string',
+        write: false,
+        read:  true
+        });
+        }
+        if (i>=1 && i<=5){
+        adapter.setObjectNotExists('ADC'+[i-1],'', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+        if (i===6){
+        adapter.setObjectNotExists('Redox', {
+        name: data[1][i],
+        type: 'number',
+        unit: jdata[2][i],
+        write: false,
+        read:  true
+        });
+        }
+        if (i===7){
+        adapter.setObjectNotExists('pH', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+        if (i>=8 && i<=15){
+        adapter.setObjectNotExists('Temperatur'+[i-7],'', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+        if (i>=16 && i<=23){
+        adapter.setObjectNotExists('Relais'+[i-16],'', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+        if (i>=24 && i<=27){
+        adapter.setObjectNotExists('Digital_Input'+[i-23],'', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+        if (i>=28 && i<=35){
+        adapter.setObjectNotExists('Relais'+[i-20],'', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+        if (i===36){
+        adapter.setObjectNotExists('CL_Rest', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+        if (i===37){
+        adapter.setObjectNotExists('pH-_Rest', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+        if (i===38){
+        adapter.setObjectNotExists('pH+_Rest', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+        if (i===39){
+        adapter.setObjectNotExists('Cl_consumption', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+        if (i===40){
+        adapter.setObjectNotExists('pH-_consumption', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+         if (i===41){
+        adapter.setObjectNotExists('pH+_consumption', {
+        name: data[1][i],
+        type: 'number',
+        unit: data[2][i],
+        write: false,
+        read:  true
+        });
+        }
+    }
+			    
 
 			    //SYSINFO Variablen mit aktuellen Werten beschreiben
 			    adapter.setState('sysinfo.VERSION', data[0][1]);
@@ -68,9 +218,62 @@ request(
 			       var gain =   parseFloat(data[4][i]);
 			       var value =   parseFloat(data[5][i]);
 			       var wert =  offset + ( gain * value);
-			       adapter.setState(data[1][i], parseFloat(Number(wert).toFixed(2)));
-			       }
+			   //    adapter.setState(data[1][i], parseFloat(Number(wert).toFixed(2)));
+			       //}
 
+    			   if (i===0) {
+           		      wert = ((wert>>8)<10?0:'')+''+(wert>>8)+':'+((wert&0xFF)<10?0:'')+''+(wert&0xFF);
+         			  /**  var hour = (wert/256).toFixed(0);
+         			    var minute = (wert%256).toFixed(0);
+        			    if (minute <10){
+        			        wert = (hour+':0'+minute);
+       			 	    }
+        			    else{
+       			          wert = (hour+':'+minute);
+        		    }*/
+           			 adapter.setState('Time',wert);
+        			 }
+        			 if (i>=1 && i<=5){
+				    adapter.setState('ADC'+[i-1], parseFloat(Number(wert).toFixed(2)));
+			      	}
+			      	if (i===6){
+			      	    adapter.setState('Redox', parseFloat(Number(wert).toFixed(2)));
+			      	}
+				if (i===7){
+					adapter.setState('pH', parseFloat(Number(wert).toFixed(2)));
+			      	}
+				if (i>=8 && i<=15){
+				    adapter.setState('Temperatur'+[i-7], parseFloat(Number(wert).toFixed(2)));  
+				}
+				if (i>=16 && i<=23){
+				    adapter.setState('Relais'+[i-16], parseFloat(Number(wert).toFixed(2)));  
+				}
+				if (i>=24 && i<=27){   
+				    adapter.setState('Digital_Input'+[i-23], parseFloat(Number(wert).toFixed(2)));  
+				}
+				if (i>=28 && i<=35){
+				    adapter.setState('Relais'+[i-20], parseFloat(Number(wert).toFixed(2)));   
+				}
+				if (i===36){
+				   adapter.setState('CL_Rest', parseFloat(Number(wert).toFixed(2)));   
+				}
+				if (i===37){
+				    adapter.setState('pH-_Rest', parseFloat(Number(wert).toFixed(2)));   
+				}
+			      	if (i===38){
+			      	    adapter.setState('pH+_Rest', parseFloat(Number(wert).toFixed(2)));  
+			      	}
+			      	if (i===39){
+			      	    adapter.setState('Cl_consumption', parseFloat(Number(wert).toFixed(2))); 
+			      	}
+			      	if (i===40){
+			      	     adapter.setState('pH-_consumption', parseFloat(Number(wert).toFixed(2)));
+			      	}
+			      	if (i===41){
+			      	    adapter.setState('pH+_consumption', parseFloat(Number(wert).toFixed(2)));
+			      	}
+			      	}
+        		}
 			   adapter.log.info("Variablen updated"); 
 
 
