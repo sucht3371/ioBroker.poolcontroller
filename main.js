@@ -32,22 +32,6 @@ request(
 				var data=CSVToArray(content);         //CSV in ein Array einlesen
 
 			    // User Variablen anlegen Achtung keine Punkte im Namen verwenden. 
-	/*		    var i=0;
-			    for (i=0; i<=41;i++){
-			        adapter.setObjectNotExists(data[1][i], {
-			        type: 'state',
-			        common:   {
-			        	name: data[1][i],
-			        	type: 'number',
-			        	unit: data[2][i],
-			        	role: 'value',
-			        	write: false,
-			        	read:  true
-			        },
-			        });
-			    }
-			    //########################### hier neu 
-			    */
 			    var i=16;
 			    for (i=16; i<=23;i++){
 				adapter.setObjectNotExists('visButtons.Relais'+[i-16], {
@@ -60,7 +44,7 @@ request(
 			       	},
 				});
 			     }
-			       i=28;
+			     i=28;
 			     for (i=28; i<=35;i++){
 				adapter.setObjectNotExists('visButtons.Relais'+[i-20], {
 				type: 'state',
@@ -255,33 +239,20 @@ request(
 			    adapter.setState('sysinfo.pH-_DOSAGE_RELAIS_ID', parseFloat(Number(data[0][8]).toFixed(2)));
 			    adapter.setState('sysinfo.Chlor_DOSAGE_RELAIS_ID', parseFloat(Number(data[0][9]).toFixed(2)));
 
-
-
 			   // User Variablen mit aktuellen Werten beschreiben
-			   i=0; 
+			    i=0; 
 			    for (i=0; i<=41;i++){
 			       var wert = offset + ( gain * value);
 			       var offset =  parseFloat(data[3][i]);
 			       var gain =   parseFloat(data[4][i]);
 			       var value =   parseFloat(data[5][i]);
 			       var wert =  offset + ( gain * value);
-			   //    adapter.setState(data[1][i], parseFloat(Number(wert).toFixed(2)));
-			       //}
-
-    			   if (i===0) {
-           		      wert = ((wert>>8)<10?0:'')+''+(wert>>8)+':'+((wert&0xFF)<10?0:'')+''+(wert&0xFF);
-         			  /*  var hour = (wert/256).toFixed(0);
-         			    var minute = (wert%256).toFixed(0);
-        			    if (minute <10){
-        			        wert = (hour+':0'+minute);
-       			 	    }
-        			    else{
-       			          wert = (hour+':'+minute);
-        		    }*/
-           			 adapter.setState('Time',wert);
-        			 }
-       		
-				if (i>=1 && i<=5){
+			   
+    		 	        if (i===0) {
+           		            wert = ((wert>>8)<10?0:'')+''+(wert>>8)+':'+((wert&0xFF)<10?0:'')+''+(wert&0xFF);
+         			    adapter.setState('Time',wert);
+        			}
+       				if (i>=1 && i<=5){
 				    adapter.setState('ADC'+[i-1], parseFloat(Number(wert).toFixed(2)));
 			      	}
 			      	if (i===6){
@@ -320,13 +291,8 @@ request(
 			      	if (i===41){
 			      	    adapter.setState('pH+_consumption', parseFloat(Number(wert).toFixed(2)));
 			      	}
-			      
-
-        		}
+			   }
 			   adapter.log.info("Variablen updated"); 
-
-
-
 		} 
 		else 	{
 			adapter.log.error(error);
