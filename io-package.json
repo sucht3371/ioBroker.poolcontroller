@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "poolcontroller",
-        "version": "0.2.3",
+        "version": "0.2.4",
         "news": {
+		"0.2.4": {
+                        "en": "extend main",
+                        "de": "Erweiterung main"
+                            },
                 "0.2.3": {
                         "en": "adaption main",
                         "de": "Anpassungen main"
