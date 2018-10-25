@@ -194,8 +194,8 @@ request(
         read:  true
         });
         }
-    }
-			    
+    
+						    
 
 			    //SYSINFO Variablen mit aktuellen Werten beschreiben
 			    adapter.setState('sysinfo.VERSION', data[0][1]);
