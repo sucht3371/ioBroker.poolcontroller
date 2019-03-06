@@ -37,6 +37,7 @@
             "en": "docs/en/template.md",
             "de": "docs/de/template.md"
         },
+        "license": "MIT",
         "localLink": "http://%host%/gui/phase2/index.htm",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
