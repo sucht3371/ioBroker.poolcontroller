@@ -21,10 +21,10 @@
 	                "de": "Initiale Version"
 		            }
         },
-		"title": "Poolcontroller Adapter",
+		"title": "Poolcontroller",
         "titleLang": {
-            "en": "poolcontroller adapter",
-            "de": "Poolcontroller Adapter"
+            "en": "poolcontroller",
+            "de": "Poolcontroller"
         },
         "desc": {
             "en": "ioBroker poolcontroller Adapter",
