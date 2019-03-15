@@ -1,6 +1,6 @@
 ![Logo](admin/poolcontroller.png)
 # ioBroker.poolcontroller
-=================
+![Number of Installations](http://iobroker.live/badges/poolcontroller-installed.svg) ![Number of Installations](http://iobroker.live/badges/poolcontroller-stable.svg) =================
 
 This adapter is for reading values ​​from the pool controller. This pool controller is from www.pooldigital.de.
 A demo of the controller can be found at http://demo.poolcontroller.de/gui/phase2/
