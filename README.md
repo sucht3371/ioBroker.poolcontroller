@@ -1,10 +1,12 @@
 ![Logo](admin/poolcontroller.png)
 # ioBroker.poolcontroller
-=================
+![Number of Installations](http://iobroker.live/badges/poolcontroller-installed.svg) ![Number of Installations](http://iobroker.live/badges/poolcontroller-stable.svg) =================
 
 This adapter is for reading values ​​from the pool controller. This pool controller is from www.pooldigital.de.
 A demo of the controller can be found at http://demo.poolcontroller.de/gui/phase2/
-
+## Changelog
+### 0.2.4
+* (SvenPeitz) rework main, correct time, get user data objects
 ### 0.2.3
 * (MichaelVoelker) adaption main
 ### 0.2.2
@@ -17,7 +19,7 @@ A demo of the controller can be found at http://demo.poolcontroller.de/gui/phase
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2018 Michael Voelker <mv@netcompsys.de>
+Copyright (c) 2019 Michael Voelker <mv@netcompsys.de>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

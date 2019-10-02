@@ -1,8 +1,12 @@
 {
     "common": {
         "name": "poolcontroller",
-        "version": "0.2.3",
+        "version": "0.2.4",
         "news": {
+		"0.2.4": {
+                        "en": "extend main",
+                        "de": "Erweiterung main"
+                            },
                 "0.2.3": {
                         "en": "adaption main",
                         "de": "Anpassungen main"
@@ -21,10 +25,10 @@
 	                "de": "Initiale Version"
 		            }
         },
-		"title": "Poolcontroller Adapter",
+		"title": "Poolcontroller",
         "titleLang": {
-            "en": "poolcontroller adapter",
-            "de": "Poolcontroller Adapter"
+            "en": "poolcontroller",
+            "de": "Poolcontroller"
         },
         "desc": {
             "en": "ioBroker poolcontroller Adapter",
@@ -37,21 +41,22 @@
             "en": "docs/en/template.md",
             "de": "docs/de/template.md"
         },
-        "localLink": "http://%host%/gui/phase2/index.htm",
+        "license": "MIT",
+        "localLink": "http://%host%:%port%/gui/phase2/index.htm",
         "platform": "Javascript/Node.js",
         "mode": "schedule",
         "schedule": "* * * * *",     
         "icon": "poolcontroller.png",
         "materialize": true,
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/sucht3371/ioBroker.poolcontroller/master/admin/poolcontroller.png",    
+        "extIcon": "https://raw.githubusercontent.com/svenp/ioBroker.poolcontroller/master/admin/poolcontroller.png",    
         "keywords": ["poolcontroller", "smarthome", "pool", "pooldaten"],
-        "readme": "https://github.com/sucht3371/ioBroker.poolcontroller/blob/master/README.md",
+        "readme": "https://github.com/svenp/ioBroker.poolcontroller/blob/master/README.md",
         "loglevel": "info",
         "type": "general"
     },
     "native": {
-        "host": "",
+        "host": "192.168.0.100",
         "port": 80
         
     },
